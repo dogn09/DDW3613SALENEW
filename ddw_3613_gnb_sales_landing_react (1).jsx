@@ -32,20 +32,20 @@ export default function DDWLanding() {
   ]
 
   return (
-    <div className="bg-[#0a0a0a] text-white min-h-screen font-sans overflow-x-hidden">
+    <div className="bg-[#0a0a0a] text-white min-h-screen overflow-x-hidden font-sans">
       {/* HERO */}
-      <section className="relative overflow-hidden min-h-screen flex items-center">
+      <section className="relative min-h-screen flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/mnt/data/IMG_1705.jpeg"
+            src="/IMG_1706.jpeg"
             alt="DDW 36/13"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-black/70" />
+          <div className="absolute inset-0 bg-black/75" />
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 py-20 grid lg:grid-cols-2 gap-12 items-center w-full">
-          <div className="animate-in fade-in slide-in-from-left duration-700">
+          <div>
             <div className="inline-flex items-center bg-[#b51217] px-5 py-2 rounded-full text-sm font-bold tracking-wide mb-6 shadow-2xl">
               ГОТОВА К РАБОТЕ
             </div>
@@ -74,15 +74,15 @@ export default function DDWLanding() {
               <a
                 href={whatsappLink}
                 target="_blank"
-                className="border border-[#353535] hover:border-[#5a5a5a] transition-all duration-300 px-8 py-5 rounded-2xl text-lg font-semibold text-center backdrop-blur-xl"
+                className="border border-[#353535] hover:border-[#5a5a5a] transition-all duration-300 px-8 py-5 rounded-2xl text-lg font-semibold text-center"
               >
                 WhatsApp
               </a>
             </div>
           </div>
 
-          <div className="animate-in fade-in slide-in-from-right duration-700">
-            <div className="bg-[#111111]/85 backdrop-blur-2xl border border-[#242424] rounded-[32px] p-8 shadow-[0_0_60px_rgba(0,0,0,0.45)]">
+          <div>
+            <div className="bg-[#111111]/90 backdrop-blur-2xl border border-[#242424] rounded-[32px] p-8 shadow-[0_0_60px_rgba(0,0,0,0.45)]">
               <div className="text-zinc-500 uppercase tracking-[0.25em] text-sm mb-4">
                 Цена
               </div>
@@ -120,15 +120,15 @@ export default function DDWLanding() {
             </p>
           </div>
 
-          <div className="rounded-[32px] overflow-hidden border border-[#262626] shadow-[0_0_80px_rgba(0,0,0,0.5)] bg-black aspect-video">
-            <video
-              className="w-full h-full object-cover"
-              controls
-              playsInline
-              preload="metadata"
-            >
-              <source src="/mnt/data/62c1d0a123dc4caf85f351e3637155e1.mp4" type="video/mp4" />
-            </video>
+          <div className="rounded-[32px] overflow-hidden shadow-[0_0_80px_rgba(0,0,0,0.5)] border border-white/10">
+            <iframe
+              src="https://rutube.ru/play/embed/e31d74100d9260e49eaba6f35786ca01"
+              width="100%"
+              height="600"
+              allow="clipboard-write; autoplay"
+              allowFullScreen
+              className="w-full min-h-[240px] md:min-h-[600px]"
+            />
           </div>
         </div>
       </section>
@@ -158,7 +158,7 @@ export default function DDWLanding() {
               className="overflow-hidden rounded-[28px] border border-[#262626] bg-[#111111] group hover:-translate-y-1 hover:shadow-[0_0_40px_rgba(181,18,23,0.18)] transition-all duration-500"
             >
               <img
-                src={`/mnt/data/${img}`}
+                src={`/${img}`}
                 alt={img}
                 className="w-full h-[320px] object-cover group-hover:scale-105 transition duration-700"
               />
@@ -220,47 +220,27 @@ export default function DDWLanding() {
               Отправлю дополнительные фото, видео запуска, обзор узлов и оперативно отвечу на вопросы.
             </p>
 
-            <div className="grid md:grid-cols-2 gap-6 mb-6">
-              <input
-                placeholder="Ваше имя"
-                className="bg-black border border-[#2a2a2a] rounded-2xl px-6 py-5 text-lg outline-none focus:border-[#b51217] transition"
-              />
+            <div className="flex flex-col sm:flex-row gap-4 mb-10">
+              <a
+                href={telegramLink}
+                target="_blank"
+                className="bg-[#b51217] hover:bg-[#d0181e] transition-all duration-300 px-10 py-5 rounded-2xl text-xl font-bold shadow-[0_0_40px_rgba(181,18,23,0.35)] text-center"
+              >
+                Telegram
+              </a>
 
-              <input
-                placeholder="Телефон / Telegram"
-                className="bg-black border border-[#2a2a2a] rounded-2xl px-6 py-5 text-lg outline-none focus:border-[#b51217] transition"
-              />
+              <a
+                href={whatsappLink}
+                target="_blank"
+                className="border border-[#353535] hover:border-[#5a5a5a] transition-all duration-300 px-10 py-5 rounded-2xl text-xl font-semibold text-center"
+              >
+                WhatsApp
+              </a>
             </div>
 
-            <textarea
-              rows={5}
-              placeholder="Комментарий"
-              className="w-full bg-black border border-[#2a2a2a] rounded-2xl px-6 py-5 text-lg outline-none focus:border-[#b51217] transition mb-8"
-            />
-
-            <div className="flex flex-col lg:flex-row gap-5 items-start lg:items-center justify-between">
-              <div className="flex flex-col sm:flex-row gap-4 w-full lg:w-auto">
-                <a
-                  href={telegramLink}
-                  target="_blank"
-                  className="bg-[#b51217] hover:bg-[#d0181e] transition-all duration-300 px-10 py-5 rounded-2xl text-xl font-bold shadow-[0_0_40px_rgba(181,18,23,0.35)] text-center"
-                >
-                  Telegram
-                </a>
-
-                <a
-                  href={whatsappLink}
-                  target="_blank"
-                  className="border border-[#353535] hover:border-[#5a5a5a] transition-all duration-300 px-10 py-5 rounded-2xl text-xl font-semibold text-center"
-                >
-                  WhatsApp
-                </a>
-              </div>
-
-              <div className="text-zinc-500 text-sm leading-relaxed">
-                Дмитрий • +7 929 938-22-31<br />
-                {email}
-              </div>
+            <div className="text-zinc-500 text-lg leading-relaxed">
+              Дмитрий • +7 929 938-22-31<br />
+              {email}
             </div>
           </div>
         </div>
